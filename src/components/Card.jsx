@@ -3,12 +3,12 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 
 const BasicCard = (breweryData) => {
   const usageData = breweryData.data;
   return (
-    <Card sx={{ minWidth: 450, maxWidth: 450 }}>
+    <Card className="brewery-card" sx={{ m: 2, minWidth: 450, maxWidth: 450 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {usageData.brewery_type}
@@ -22,10 +22,10 @@ const BasicCard = (breweryData) => {
         </Typography>
       </CardContent>
       <CardActions>
-      <Button variant="contained" size="medium">
+      <Button variant="contained" size="medium" href={usageData.website_url} target="_blank">
           Website
-        </Button>
-        <Typography variant="body2" gutterBottom>
+      </Button>
+        <PhoneIphoneIcon sx={{ ml: 3, mr: 1 }}/> <Typography variant="body2">
         {usageData.phone}
         </Typography>
       </CardActions>
