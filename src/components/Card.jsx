@@ -8,7 +8,7 @@ import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 const BasicCard = (breweryData) => {
   const usageData = breweryData.data;
   return (
-    <Card className="brewery-card" sx={{ m: 2, minWidth: 450, maxWidth: 450 }}>
+    <Card className="brewery-card" sx={{ m: 2, minWidth: 350, maxWidth: 350 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {usageData.brewery_type}
